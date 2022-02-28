@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RTCWebApp</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="header">
+      <p id="status"></p>
+    </div>
+
+    <div class="camera-view">
+      <div class="remote">
+        <video width="900" height="675" id="remote-video" autoplay playsinline></video>
+        <div class="local">
+          <video width="160" height="120" id="local-video" autoplay playsinline muted></video>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="create-call-button">Call</button>
+      <button id="answer-call-button">Answer</button>
+      <input id="call-id-input" />
+      <button id="hangup-call-button" disabled>Hang up</button>
+    </div>
+
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
